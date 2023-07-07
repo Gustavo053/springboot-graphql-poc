@@ -1,0 +1,31 @@
+type Query {
+    bookById(id: ID): Book
+    doctorById(id: ID): Doctor
+    allDoctor: [Doctor]
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+
+type Patient {
+    id: ID
+    name: String
+    age: Int
+    idDoctor: Int
+}
+
+type Doctor {
+    id: ID
+    name: String
+    patients: [Patient]
+}
